@@ -1,18 +1,18 @@
+<script setup>
+definePageMeta({
+  // title: 'Главная страница',
+  title: 'Главная страница',
+  layout: 'home',
+});
+</script>
+
 <template>
-  <div class="">Первая страница 222</div>
+  <Main />
 </template>
 
 <script>
-// const route = useRoute();
-// console.log(route.meta.title);
-
-definePageMeta({
-  title: 'Главная страница',
-  layout: 'default',
-});
-
 export default {
-  name: 'main-page',
+  name: 'MainPage',
 };
 </script>
 

@@ -1,8 +1,7 @@
 <template>
-  <ul>
+  <ul class="m-10">
     <li>
-      <NuxtLink to="/">Home</NuxtLink>
-      <NuxtLink to="/tools">Tools</NuxtLink>
+      <NuxtLink to="/tools">Инструменты</NuxtLink>
     </li>
   </ul>
 </template>

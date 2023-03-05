@@ -1,5 +1,10 @@
 <template>
-  <div class="layout layout-default bg-slate-600 text-white">
+  <div class="layout">
+    <Header />
+    <NuxtLink to="/">
+      <img src="~/assets/images/my-logo.svg" alt="My Logo" class="layout__logo" />
+    </NuxtLink>
+
     <slot />
   </div>
 </template>
@@ -10,4 +15,18 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style lang="scss">
+.layout {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 100vh;
+  &__logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+</style>
