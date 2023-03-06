@@ -1,6 +1,8 @@
 <template>
   <section class="tools">
-    <p>Инструменты</p>
+    <h1 class="tools__title a-font__h1">Инструменты</h1>
+    <h2 class="tools__subtitle a-font__h2">SVG</h2>
+    <IconsTelegram />
   </section>
 </template>
 
@@ -11,18 +13,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.tools {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  border-left: 10px solid var(--a-white);
-
-  &__logo {
-    position: absolute;
-    top: 0;
-    left: -10px;
-  }
-}
+@import './tools.scss';
 </style>
