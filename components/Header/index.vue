@@ -1,7 +1,10 @@
 <template>
-  <ul class="m-10">
-    <li>
+  <ul class="header">
+    <li class="header__item">
       <NuxtLink to="/tools">Инструменты</NuxtLink>
+    </li>
+    <li class="header__item">
+      <NuxtLink to="/sandbox">Песочница</NuxtLink>
     </li>
   </ul>
 </template>
@@ -12,4 +15,17 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped lang="scss">
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 48px;
+  background-color: var(--a-mainBg);
+
+  &__item {
+    margin: 0 10px;
+    text-transform: uppercase;
+  }
+}
+</style>
