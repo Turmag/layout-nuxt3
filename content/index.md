@@ -1,0 +1,1 @@
+# Project layout Nuxt 3

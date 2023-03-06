@@ -24,7 +24,8 @@ export default {
   &__logo {
     position: absolute;
     top: 0;
-    left: -10px;
+    left: 0;
+    z-index: 10;
   }
 }
 </style>

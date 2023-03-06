@@ -1,6 +1,12 @@
+<script setup>
+const { $sayWord } = useNuxtApp();
+$sayWord('это проверка работы функции');
+</script>
+
 <template>
   <section class="sandbox">
     <p>Песочница</p>
+    <IconsTelegram />
   </section>
 </template>
 
