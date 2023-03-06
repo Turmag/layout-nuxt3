@@ -1,34 +1,22 @@
-<script setup>
-const { $sayWord } = useNuxtApp();
-$sayWord('это проверка работы функции');
-</script>
-
 <template>
   <section class="sandbox">
-    <p>Песочница</p>
+    <h1 class="sandbox__title">Компоненты и методы</h1>
     <IconsTelegram />
+
+    <div>
+      Counter: {{ counter }}
+      <button @click="counter++">+</button>
+      <button @click="counter--">-</button>
+    </div>
   </section>
 </template>
 
-<script>
-export default {
-  name: 'Tools',
-};
+<script setup>
+const { $sayWord } = useNuxtApp();
+$sayWord('это проверка работы функции');
+const counter = useState('counter', () => Math.round(Math.random() * 1000));
 </script>
 
 <style scoped lang="scss">
-.sandbox {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  height: 100vh;
-  border-left: 10px solid var(--a-white);
-
-  &__logo {
-    position: absolute;
-    top: 0;
-    left: -10px;
-  }
-}
+@import './sandbox.scss';
 </style>

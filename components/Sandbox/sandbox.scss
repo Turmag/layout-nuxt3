@@ -1,0 +1,14 @@
+.sandbox {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  min-height: 100vh;
+
+  &__title {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: rem(40);
+  }
+}

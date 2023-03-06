@@ -7,11 +7,21 @@ export default defineNuxtConfig({
     // assets: '/<rootDir>/assets',
   },
   css: ['~/assets/styles/main.scss'],
+  vite: {
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: '@import "~/assets/styles/tools/_mixins.scss";',
+        },
+      },
+    },
+  },
   postcss: {
     plugins: {
       tailwindcss: {},
       autoprefixer: {},
     },
   },
-  modules: ['@vueuse/nuxt', '@nuxt/content'],
+
+  modules: ['@vueuse/nuxt', '@nuxt/content', '@nuxtjs/i18n'],
 });
