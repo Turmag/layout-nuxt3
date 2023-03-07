@@ -16,26 +16,80 @@
     &-list {
       display: grid;
       gap: rem(10);
-      //grid-template-areas:
-      //  title item-01 item-02 item-03
-      //  title item-01 item-02 item-03;
+      grid-template-areas:
+        'title item-01 item-02 item-03'
+        'title item-04 item-05 item-06';
       grid-template-rows: 1fr 1fr;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: rem(150) 1fr 1fr 1fr;
+      align-items: stretch;
       width: 100%;
+      margin-bottom: rem(50);
     }
     &-item {
-      //&.cell-01 {
-      //  grid-area: title;
-      //}
-      //&.cell-02 {
-      //  grid-area: item-01;
-      //}
-      //&.cell-03 {
-      //  grid-area: item-02;
-      //}
-      //&.cell-04 {
-      //  grid-area: item-03;
-      //}
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      &.cell-01 {
+        grid-area: title;
+        align-self: center;
+        height: 100%;
+        background-color: var(--a-bgAccent);
+      }
+      &.cell-02 {
+        grid-area: item-01;
+      }
+      &.cell-03 {
+        grid-area: item-02;
+      }
+      &.cell-04 {
+        grid-area: item-03;
+      }
+      &.cell-05 {
+        grid-area: item-04;
+      }
+      &.cell-06 {
+        grid-area: item-05;
+      }
+      &.cell-07 {
+        grid-area: item-06;
+      }
+    }
+
+    &-img-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: rem(40);
+      height: rem(40);
+      margin-bottom: rem(8);
+    }
+    &-image {
+      object-fit: cover;
+      width: auto;
+      height: 100%;
+    }
+
+    &-link-group {
+      display: flex;
+      row-gap: rem(12);
+      column-gap: rem(12);
+    }
+    &-sourse {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 rem(8);
+      color: var(--a-white);
+      background-color: var(--a-mainAccent);
+    }
+    &-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 rem(12);
+      color: var(--a-white);
+      background-color: var(--a-mainAccent);
     }
   }
 
