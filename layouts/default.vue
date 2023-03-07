@@ -29,5 +29,25 @@ export default {
     left: 0;
     z-index: 10;
   }
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+
+    @media screen and (min-width: $tablet) {
+      max-width: rem(768);
+      padding: 0 rem(40);
+    }
+    @media screen and (min-width: $tabletMax) {
+      max-width: rem(832);
+    }
+    @media screen and (min-width: $desktopMin) {
+      max-width: rem(1080);
+    }
+  }
 }
 </style>

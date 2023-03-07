@@ -1,14 +1,11 @@
 .sandbox {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  min-height: 100vh;
-
   &__title {
-    margin-top: 50px;
-    margin-bottom: 50px;
-    font-size: rem(40);
+    margin-top: rem(80);
+    margin-bottom: rem(30);
+    color: var(--a-mainAccent);
+  }
+  &__subtitle {
+    margin-bottom: rem(50);
+    color: var(--a-headerText);
   }
 }

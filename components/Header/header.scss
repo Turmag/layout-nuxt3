@@ -1,16 +1,20 @@
-.main-nav {
+.header {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  min-height: 48px;
+  background-color: var(--a-mainBg);
 
   &__item {
-    margin: rem(6) 0;
+    margin: 0 10px;
     text-transform: uppercase;
     user-select: none;
 
     &:hover {
+      color: var(--a-mainAccent);
+    }
+
+    .router-link-exact-active {
       color: var(--a-mainAccent);
     }
   }

@@ -1,9 +1,9 @@
 <template>
   <ul class="header">
-    <li class="header__item">
+    <li class="header__item a-font__s">
       <NuxtLink to="/tools">Инструменты</NuxtLink>
     </li>
-    <li class="header__item">
+    <li class="header__item a-font__s">
       <NuxtLink to="/sandbox">Песочница</NuxtLink>
     </li>
   </ul>
@@ -16,16 +16,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 48px;
-  background-color: var(--a-mainBg);
-
-  &__item {
-    margin: 0 10px;
-    text-transform: uppercase;
-  }
-}
+@import './header.scss';
 </style>
