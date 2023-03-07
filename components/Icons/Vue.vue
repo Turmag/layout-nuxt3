@@ -7,6 +7,6 @@
 
 <script>
 export default {
-  name: 'Vue',
+  name: 'IconVue',
 };
 </script>
