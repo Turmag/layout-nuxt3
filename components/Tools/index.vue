@@ -6,10 +6,7 @@
         <li class="tools__header-item cell-01">Технологии</li>
         <li class="tools__header-item" :class="item.cell" v-for="(item, index) in techList" :key="index">
           <div class="tools__header-img-wrapper">
-            <!--            <IconsVue class="tools__header-image" />-->
-
             <component :is="item.icon"></component>
-            <component :is="nameComponent"></component>
           </div>
           <div class="tools__header-link-group">
             <a :href="`${item.href}`" class="tools__header-sourse" target="_blank">{{ item.title }}</a>
@@ -20,25 +17,33 @@
     </div>
     <div class="tools__section">
       <h2 class="tools__subtitle a-font__h3">SVG</h2>
-      <IconsTelegram />
+      <component :is="IconsTelegram"></component>
     </div>
   </section>
 </template>
 
-<script>
-export default {
-  name: 'Tools',
-
-  data: () => ({
-    nameComponent: 'IconsVue',
-    techList: [
-      { cell: 'cell-02', icon: 'IconsVue', href: 'https://v3.ru.vuejs.org/', title: 'Vue.js Doc' },
-      { cell: 'cell-03', icon: 'IconsNuxt', href: 'https://nuxt.com/', title: 'Nuxt Doc' },
-      { cell: 'cell-04', icon: 'IconsNuxt', href: 'https://nuxt.com/', title: 'Nuxt Doc' },
-      { cell: 'cell-05', icon: 'IconsNuxt', href: 'https://nuxt.com/', title: 'Nuxt Doc' },
-    ],
-  }),
-};
+<script setup>
+import { IconsVue, IconsNuxt, IconsTelegram } from '#components';
+const techList = [
+  {
+    cell: 'cell-02',
+    icon: IconsVue,
+    href: 'https://v3.ru.vuejs.org/',
+    title: 'Vue.js Doc',
+  },
+  {
+    cell: 'cell-03',
+    icon: IconsNuxt,
+    href: 'https://nuxt.com/',
+    title: 'Nuxt Doc',
+  },
+  {
+    cell: 'cell-04',
+    icon: IconsNuxt,
+    href: 'https://nuxt.com/',
+    title: 'Nuxt Doc',
+  },
+];
 </script>
 
 <style scoped lang="scss">
