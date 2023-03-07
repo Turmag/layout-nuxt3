@@ -17,29 +17,37 @@
     </div>
     <div class="tools__section">
       <h2 class="tools__subtitle a-font__h3">SVG</h2>
-      <component :is="IconsTelegram"></component>
+      <component :is="getIcon('Telegram')"></component>
     </div>
   </section>
 </template>
 
 <script setup>
-import { IconsVue, IconsNuxt, IconsTelegram } from '#components';
+const modules = import.meta.globEager('../Icons/*');
+
+const getIcon = (name) => {
+  const path = `../Icons/${name}.vue`;
+  return modules[path].default;
+};
+
+const nuxtIcon = getIcon('Nuxt');
+
 const techList = [
   {
     cell: 'cell-02',
-    icon: IconsVue,
+    icon: getIcon('Vue'),
     href: 'https://v3.ru.vuejs.org/',
     title: 'Vue.js Doc',
   },
   {
     cell: 'cell-03',
-    icon: IconsNuxt,
+    icon: nuxtIcon,
     href: 'https://nuxt.com/',
     title: 'Nuxt Doc',
   },
   {
     cell: 'cell-04',
-    icon: IconsNuxt,
+    icon: nuxtIcon,
     href: 'https://nuxt.com/',
     title: 'Nuxt Doc',
   },
