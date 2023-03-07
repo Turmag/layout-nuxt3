@@ -9,5 +9,13 @@
     margin: 0 10px;
     text-transform: uppercase;
     user-select: none;
+
+    &:hover {
+      color: var(--a-mainAccent);
+    }
+
+    .router-link-exact-active {
+      color: var(--a-mainAccent);
+    }
   }
 }

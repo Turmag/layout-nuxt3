@@ -1,5 +1,5 @@
 <template>
-  <section class="sandbox">
+  <section class="sandbox layout__wrapper">
     <h1 class="sandbox__title a-font__h1">Vue 3 Nuxt 3</h1>
     <h2 class="sandbox__subtitle a-font__h2">Компоненты и методы</h2>
 

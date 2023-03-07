@@ -1,11 +1,4 @@
 .tools {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  width: 100%;
-  min-height: 100vh;
-
   &__title {
     margin-top: rem(80);
     margin-bottom: rem(30);
@@ -14,5 +7,42 @@
   &__subtitle {
     margin-bottom: rem(50);
     color: var(--a-headerText);
+  }
+
+  &__header {
+    display: flex;
+    width: 100%;
+
+    &-list {
+      display: grid;
+      gap: rem(10);
+      //grid-template-areas:
+      //  title item-01 item-02 item-03
+      //  title item-01 item-02 item-03;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      width: 100%;
+    }
+    &-item {
+      //&.cell-01 {
+      //  grid-area: title;
+      //}
+      //&.cell-02 {
+      //  grid-area: item-01;
+      //}
+      //&.cell-03 {
+      //  grid-area: item-02;
+      //}
+      //&.cell-04 {
+      //  grid-area: item-03;
+      //}
+    }
+  }
+
+  &__section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
